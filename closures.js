@@ -272,13 +272,29 @@ to 5. What we need to do is console.log(i) so that it logs like so:
  Fix the code below to log the desired output.
  */
 
+//OPTION ONE
 function timeOutCounter() {
   for (var i = 0; i <= 5; i++) {
-    (function(i) {
+    (function(j) {
       setTimeout(function() {
-        console.log(i);
-      }, i * 1000);
+        console.log(j);
+      }, j * 1000);
     })(i)
+  }
+}
+
+timeOutCounter();
+
+//OPTION TWO
+function closure (j){
+  return function(){
+      console.log(j)
+  }
+}
+
+function timeOutCounter() {
+  for (var i = 0; i <= 5; i++) {
+    setTimeout(closure(i), i*1000)
   }
 }
 timeOutCounter();
