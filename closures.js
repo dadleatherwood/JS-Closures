@@ -48,9 +48,12 @@ Create a callJake function that when invoked with '435-555-9248' returns 'Callin
 in your console. */
 
 //Code Here
-function callJake(number) {
-  return 'Calling Jake at ' + number;
-}
+// function callJake(number) {
+//   return 'Calling Jake at ' + number;
+// }
+
+callJake = callFriend('Jake')
+console.log( callJake('435-555-9248') )
 
 
 
@@ -110,7 +113,7 @@ function counterFactory(value) {
   // Code here.
     return {
       inc: function () {
-            count++;
+            count++
             return count;
       },
       dec:  function () {
