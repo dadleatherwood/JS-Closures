@@ -286,9 +286,9 @@ function timeOutCounter() {
 timeOutCounter();
 
 //OPTION TWO
-function closure (j){
+function closure (num){
   return function(){
-      console.log(j)
+      console.log(num)
   }
 }
 
